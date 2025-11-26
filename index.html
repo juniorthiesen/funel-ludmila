@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Dias Sem Dores | Dra. Ludmila Simões</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID'); // Replace with your actual Pixel ID
+        fbq('track', 'PageView');
+    </script>
+
+    <!-- End Meta Pixel Code -->
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'YOUR_GA_ID'); // Replace with your actual GA ID
+    </script>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premium: {
+                            bg: '#0a0a0a',
+                            secondary: '#121212',
+                            text: '#f0f0f0',
+                            muted: '#a0a0a0',
+                            gold: '#d4af37',
+                            purple: '#b388eb',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-gold': 'pulse-gold 2s infinite',
+                        'zoom-effect': 'zoomEffect 20s infinite alternate',
+                    },
+                    keyframes: {
+                        'pulse-gold': {
+                            '0%': { boxShadow: '0 0 0 0 rgba(212, 175, 55, 0.4)' },
+                            '70%': { boxShadow: '0 0 0 15px rgba(212, 175, 55, 0)' },
+                            '100%': { boxShadow: '0 0 0 0 rgba(212, 175, 55, 0)' },
+                        },
+                        zoomEffect: {
+                            '0%': { transform: 'scale(1)' },
+                            '100%': { transform: 'scale(1.1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom cursor styles that are hard to do with pure Tailwind utilities alone */
+        body {
+            cursor: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                cursor: auto;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body
+    class="bg-premium-bg text-premium-text overflow-x-hidden antialiased selection:bg-premium-gold selection:text-black">
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
